@@ -1,10 +1,14 @@
+@font-face {
+    font-family: "joe-college";
+    src: url("./font/joe-college.ttf");
+}
 * {
-    margin: 0;
-    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 
-h1 {
-    color: red;
 
+h1,h2 {
+    color: rgba(18, 17, 17, 0.9);
+    font-family: "joe-college",'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
