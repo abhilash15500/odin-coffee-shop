@@ -27,8 +27,7 @@ function onAboutUsClick() {
 
     const aboutUsImage = document.createElement("img");
     aboutUsImage.classList.add("aboutus-image");
-    aboutUsImage.style.width = "40vw";
-    aboutUsImage.style.height = "60vh";
+   
 
     aboutUsImage.src = coffeeShopImage3;
 
