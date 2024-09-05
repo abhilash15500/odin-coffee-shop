@@ -17,15 +17,14 @@ function onPageLoad() {const homePageContainer = document.createElement("div");
     homeRightContainer.innerHTML = "";
 
     
-    // document.body.style.backgroundColor = "tomato";
+    
     const homePageHeading = document.createElement("h1");
     homePageHeading.classList.add("homepage-h1")
 
     const homePageSubHeading = document.createElement("h2");
     const homePageParagraph = document.createElement("p");
     const homePageImage = document.createElement("img");
-    // homePageImage.style.width = "20vw";
-    // homePageImage.style.height = "40vh";
+    
     homePageImage.classList.add("home-page-image")
 
 

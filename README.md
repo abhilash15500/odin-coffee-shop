@@ -4,7 +4,7 @@ learnt  Webpack configuration for managing assets like images, fonts, and CSS, a
 
 live link - https://abhilash15500.github.io/odin-coffee-shop/
 
-#font and image credit
+
 ## Fonts
 
 - [Joe College Sans NF W00 Rg Fonts](https://www.onlinewebfonts.com/download/8ea6cd010a318c58daba0e05c748a0d2)
