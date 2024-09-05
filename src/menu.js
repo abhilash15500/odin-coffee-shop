@@ -2,108 +2,126 @@
 let contentDiv = document.querySelector("#content");
 const menuLeftContainer = document.createElement("div");
 const menuRightContainer = document.createElement("div");
+const menuContainer = document.createElement("div");
+
+menuContainer.classList.add("menu-container");
+menuLeftContainer.classList.add("menu-left-container");
+menuRightContainer.classList.add("menu-right-container");
 
 const coffees = [
     {
-      name: 'Espresso',
-      xp: 150,
-      description: 'Strong and bold, the perfect energy boost in a single shot'
+        name: 'Espresso',
+        xp: '150 XP',
+        description: 'Strong and bold, the perfect energy boost in a single shot'
     },
     {
-      name: 'Americano',
-      xp: 180,
-      description: 'Espresso diluted with hot water for a smooth, rich flavor'
+        name: 'Americano',
+        xp: '180 XP',
+        description: 'Espresso diluted with hot water for a smooth, rich flavor'
     },
     {
-      name: 'Cappuccino',
-      xp: 200,
-      description: 'Espresso with steamed milk and a thick layer of foam'
+        name: 'Cappuccino',
+        xp: '200 XP',
+        description: 'Espresso with steamed milk and a thick layer of foam'
     },
     {
         name: 'Iced Coffee',
-        xp: 170,
+        xp: '170 XP',
         description: 'Chilled coffee served over ice, perfect for a refreshing pick-me-up'
-      },
-  ];
-  
+    },
+];
 
-  const pizzas = [
+const pizzas = [
     {
-      name: 'Classic Margherita',
-      xp: 600,
-      description: 'Fresh mozzarella, tomatoes, and basil on a crispy crust'
+        name: 'Classic Margherita',
+        xp: '600 XP',
+        description: 'Fresh mozzarella, tomatoes, and basil on a crispy crust'
     },
     {
-      name: 'Pepperoni Paradise',
-      xp: 650,
-      description: 'Pepperoni slices on melted mozzarella with zesty marinara sauce'
+        name: 'Pepperoni Paradise',
+        xp: '650 XP',
+        description: 'Pepperoni slices on melted mozzarella with zesty marinara sauce'
     },
     {
-      name: 'Veggie Delight',
-      xp: 620,
-      description: 'Bell peppers, onions, olives, and mushrooms with a touch of oregano'
+        name: 'Veggie Delight',
+        xp: '620 XP',
+        description: 'Bell peppers, onions, olives, and mushrooms with a touch of oregano'
     },
     {
-      name: 'BBQ Chicken Pizza',
-      xp: 700,
-      description: 'Grilled chicken, tangy BBQ sauce, and red onions on a cheese-filled base'
+        name: 'BBQ Chicken Pizza',
+        xp: '700 XP',
+        description: 'Grilled chicken, tangy BBQ sauce, and red onions on a cheese-filled base'
     }
-  ];
+];
 
-  const sandwiches = [
+const sandwiches = [
     {
-      name: 'Classic Club',
-      xp: 500,
-      description: 'Triple-layered sandwich with turkey, bacon, lettuce, and tomato on toasted bread'
+        name: 'Classic Club',
+        xp: '500 XP',
+        description: 'Triple-layered sandwich with turkey, bacon, lettuce, and tomato on toasted bread'
     },
     {
-      name: 'Grilled Cheese Supreme',
-      xp: 450,
-      description: 'Melted cheddar and mozzarella on toasted sourdough, served golden and crispy'
+        name: 'Grilled Cheese Supreme',
+        xp: '450 XP',
+        description: 'Melted cheddar and mozzarella on toasted sourdough, served golden and crispy'
     },
     {
-      name: 'Chicken Pesto Panini',
-      xp: 550,
-      description: 'Grilled chicken, pesto, and mozzarella pressed between crunchy ciabatta'
+        name: 'Chicken Pesto Panini',
+        xp: '550 XP',
+        description: 'Grilled chicken, pesto, and mozzarella pressed between crunchy ciabatta'
     },
     {
-      name: 'Avocado BLT',
-      xp: 520,
-      description: 'Bacon, lettuce, tomato, and avocado on whole wheat bread'
+        name: 'Avocado BLT',
+        xp: '520 XP',
+        description: 'Bacon, lettuce, tomato, and avocado on whole wheat bread'
     }
-  ];
-  
+];
 
-
-  const cocktails = [
+const cocktails = [
     {
-      name: 'Whimsy Mojito',
-      xp: 600,
-      description: 'Fresh mint, lime, rum, and a splash of soda for a refreshing sip'
+        name: 'Whimsy Mojito',
+        xp: '600 XP',
+        description: 'Fresh mint, lime, rum, and a splash of soda for a refreshing sip'
     },
     {
-      name: 'Sunset Sangria',
-      xp: 650,
-      description: 'A fruity blend of wine, fresh berries, and citrus slices'
+        name: 'Sunset Sangria',
+        xp: '650 XP',
+        description: 'A fruity blend of wine, fresh berries, and citrus slices'
     },
     {
-      name: 'Café Colada',
-      xp: 700,
-      description: 'An exciting mix of coconut cream, pineapple, and a shot of espresso'
+        name: 'Cafe Colada',
+        xp: '700 XP',
+        description: 'An exciting mix of coconut cream, pineapple, and a shot of espresso'
     },
     {
-      name: 'Berry Bliss Martini',
-      xp: 680,
-      description: 'A smooth cocktail with vodka, mixed berries, and a twist of lemon'
+        name: 'Berry Bliss Martini',
+        xp: '680 XP',
+        description: 'A smooth cocktail with vodka, mixed berries, and a twist of lemon'
     }
-  ];
-  
+];
 
+
+function onMenuClick() {
+    contentDiv.textContent = "";
+    menuRightContainer.textContent = "";
+    menuLeftContainer.textContent = "";
+
+    const menuHeading = document.createElement("h1");
+    menuHeading.textContent = "Xplozion's Cafe Menu";
+
+    contentDiv.appendChild(menuHeading);
+
+    appendCoffeeInfo();
+    appendPizzaInfo();
+    appendSandwichInfo();
+    appendCocktailInfo();
+
+}
 
 
   function appendCoffeeInfo() {
     const coffeesHeading = document.createElement("h2");
-    coffeesHeading.textContent = "Coffees";
+    coffeesHeading.textContent = "Coffees ☕";
     const ul = document.createElement("ul");
     
     coffees.forEach(coffee => {
@@ -114,14 +132,19 @@ const coffees = [
 
     menuLeftContainer.appendChild(coffeesHeading);
     menuLeftContainer.appendChild(ul);
-    contentDiv.appendChild(menuLeftContainer);
+
+
+
+
+    menuContainer.appendChild(menuLeftContainer);
+    contentDiv.appendChild(menuContainer);
   };
 
 
 
   function appendPizzaInfo() {
     const pizzasHeading = document.createElement("h2");
-    pizzasHeading.textContent = "Pizzas";
+    pizzasHeading.textContent = "Pizzas 🍕";
     const ul = document.createElement("ul");
     
     pizzas.forEach(pizza => {
@@ -132,7 +155,9 @@ const coffees = [
 
     menuLeftContainer.appendChild(pizzasHeading);
     menuLeftContainer.appendChild(ul);
-    contentDiv.appendChild(menuLeftContainer);
+
+    menuContainer.appendChild(menuLeftContainer);
+    contentDiv.appendChild(menuContainer);
 
   }
 
@@ -141,7 +166,8 @@ const coffees = [
 
   function appendSandwichInfo() {
     const sandwichesHeading = document.createElement("h2");
-    sandwichesHeading.textContent = "Sandwiches";
+    sandwichesHeading.textContent = "Sandwiches 🥪 ";
+
     
     const ul = document.createElement("ul");
   
@@ -153,7 +179,9 @@ const coffees = [
   
     menuRightContainer.appendChild(sandwichesHeading);
     menuRightContainer.appendChild(ul);
-    contentDiv.appendChild(menuRightContainer);
+
+    menuContainer.appendChild(menuRightContainer);
+    contentDiv.appendChild(menuContainer);
   }
 
 
@@ -161,7 +189,7 @@ const coffees = [
   
   function appendCocktailInfo() {
     const cocktailsHeading = document.createElement("h2");
-    cocktailsHeading.textContent = "Cocktails";
+    cocktailsHeading.textContent = "Cocktails 🍹";
     
     const ul = document.createElement("ul");
   
@@ -173,28 +201,14 @@ const coffees = [
   
     menuRightContainer.appendChild(cocktailsHeading);
     menuRightContainer.appendChild(ul);
-    contentDiv.appendChild(menuRightContainer);
+
+    menuContainer.appendChild(menuRightContainer);
+    contentDiv.appendChild(menuContainer);
   }
   
   
 
 
 
-function onMenuClick() {
-    contentDiv.textContent = "";
-    menuRightContainer.textContent = "";
-    menuLeftContainer.textContent = "";
-
-    const menuHeading = document.createElement("h1");
-    menuHeading.textContent = "Xplozion's Café Menu";
-
-    contentDiv.appendChild(menuHeading);
-
-    appendCoffeeInfo();
-    appendPizzaInfo();
-    appendSandwichInfo();
-    appendCocktailInfo();
-
-}
 
 export {onMenuClick};

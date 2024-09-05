@@ -4,6 +4,7 @@ import { onPageLoad } from "./onPageLoad";
 import { onHomeClick } from "./home";
 import { onAboutUsClick } from "./aboutus";
 import { onMenuClick } from "./menu";
+import {cssFile} from "./styles.css";
 
 
 onPageLoad();
