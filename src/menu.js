@@ -120,11 +120,11 @@ function onMenuClick() {
 }
 
 
-  function appendCoffeeInfo() {
+function appendCoffeeInfo() {
     const coffeesHeading = document.createElement("h2");
     coffeesHeading.textContent = "Coffees ☕";
     const ul = document.createElement("ul");
-    
+
     coffees.forEach(coffee => {
         const li = document.createElement('li');
         li.innerHTML = `${coffee.name} - ${coffee.xp}<br>${coffee.description}`;
@@ -139,15 +139,15 @@ function onMenuClick() {
 
     menuContainer.appendChild(menuLeftContainer);
     contentDiv.appendChild(menuContainer);
-  };
+};
 
 
 
-  function appendPizzaInfo() {
+function appendPizzaInfo() {
     const pizzasHeading = document.createElement("h2");
     pizzasHeading.textContent = "Pizzas 🍕";
     const ul = document.createElement("ul");
-    
+
     pizzas.forEach(pizza => {
         const li = document.createElement('li');
         li.innerHTML = `${pizza.name} - ${pizza.xp}<br>${pizza.description}`;
@@ -160,56 +160,56 @@ function onMenuClick() {
     menuContainer.appendChild(menuLeftContainer);
     contentDiv.appendChild(menuContainer);
 
-  }
+}
 
 
 
 
-  function appendSandwichInfo() {
+function appendSandwichInfo() {
     const sandwichesHeading = document.createElement("h2");
     sandwichesHeading.textContent = "Sandwiches 🥪 ";
 
-    
+
     const ul = document.createElement("ul");
-  
+
     sandwiches.forEach(sandwich => {
-      const li = document.createElement('li');
-      li.innerHTML = `${sandwich.name} - ${sandwich.xp}<br>${sandwich.description}`;
-      ul.appendChild(li);
+        const li = document.createElement('li');
+        li.innerHTML = `${sandwich.name} - ${sandwich.xp}<br>${sandwich.description}`;
+        ul.appendChild(li);
     });
-  
+
     menuRightContainer.appendChild(sandwichesHeading);
     menuRightContainer.appendChild(ul);
 
     menuContainer.appendChild(menuRightContainer);
     contentDiv.appendChild(menuContainer);
-  }
+}
 
 
 
-  
-  function appendCocktailInfo() {
+
+function appendCocktailInfo() {
     const cocktailsHeading = document.createElement("h2");
     cocktailsHeading.textContent = "Cocktails 🍹";
-    
+
     const ul = document.createElement("ul");
-  
+
     cocktails.forEach(cocktail => {
-      const li = document.createElement('li');
-      li.innerHTML = `${cocktail.name} - ${cocktail.xp}<br>${cocktail.description}`;
-      ul.appendChild(li);
+        const li = document.createElement('li');
+        li.innerHTML = `${cocktail.name} - ${cocktail.xp}<br>${cocktail.description}`;
+        ul.appendChild(li);
     });
-  
+
     menuRightContainer.appendChild(cocktailsHeading);
     menuRightContainer.appendChild(ul);
 
     menuContainer.appendChild(menuRightContainer);
     contentDiv.appendChild(menuContainer);
-  }
-  
-  
+}
 
 
 
 
-export {onMenuClick};
+
+
+export { onMenuClick };
