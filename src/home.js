@@ -1,9 +1,10 @@
-import coffeeShopImage from "./images/coffee-shop-image.jpg"
+import coffeeShopImage from "./images/coffee-shop-image.jpg";
+
 const contentDiv = document.querySelector("#content");
 
 
 
-function onPageLoad() {
+function onHomeClick() {
     
     contentDiv.innerHTML = "";
     // document.body.style.backgroundColor = "tomato";
@@ -29,9 +30,4 @@ function onPageLoad() {
  }
 
 
-
- export {onPageLoad};
-
-
-
- 
+ export {onHomeClick}
