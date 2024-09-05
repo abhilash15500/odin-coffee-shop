@@ -3,9 +3,7 @@ const contentDiv = document.querySelector("#content");
 
 
 
-function onPageLoad() {
-    
-    const homePageContainer = document.createElement("div");
+function onPageLoad() {const homePageContainer = document.createElement("div");
     homePageContainer.classList.add("home-page-container");
 
     contentDiv.innerHTML = "";
@@ -38,10 +36,16 @@ function onPageLoad() {
     homePageImage.classList.add("home-page-image");
 
 
+    const homePageButton = document.createElement("button");
+    homePageButton.textContent = "Book a table!";
+    homePageButton.classList.add("home-page-button");
+
+
     homeLeftContainer.appendChild(homePageHeading);
     homeLeftContainer.appendChild(homePageSubHeading);
     homeLeftContainer.appendChild(homePageParagraph);
     homeRightContainer.appendChild(homePageImage);
+    homeLeftContainer.appendChild(homePageButton);
 
     homePageContainer.appendChild(homeLeftContainer);
     homePageContainer.appendChild(homeRightContainer);
@@ -49,8 +53,9 @@ function onPageLoad() {
     contentDiv.appendChild(homePageContainer);
 
     
- }
 
+
+}
 
 
  export {onPageLoad};

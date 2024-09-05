@@ -39,10 +39,16 @@ function onHomeClick() {
     homePageImage.classList.add("home-page-image");
 
 
+    const homePageButton = document.createElement("button");
+    homePageButton.textContent = "Book a table!";
+    homePageButton.classList.add("home-page-button");
+
+
     homeLeftContainer.appendChild(homePageHeading);
     homeLeftContainer.appendChild(homePageSubHeading);
     homeLeftContainer.appendChild(homePageParagraph);
     homeRightContainer.appendChild(homePageImage);
+    homeLeftContainer.appendChild(homePageButton);
 
     homePageContainer.appendChild(homeLeftContainer);
     homePageContainer.appendChild(homeRightContainer);

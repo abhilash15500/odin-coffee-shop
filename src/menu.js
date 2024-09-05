@@ -107,6 +107,7 @@ function onMenuClick() {
     menuLeftContainer.textContent = "";
 
     const menuHeading = document.createElement("h1");
+    menuHeading.classList.add("menu-heading");
     menuHeading.textContent = "Xplozion's Cafe Menu";
 
     contentDiv.appendChild(menuHeading);
