@@ -13,10 +13,10 @@ function onAboutUsClick() {
 
     const aboutUsHeading = document.createElement("h1");
     aboutUsHeading.classList.add("aboutus-heading");
+    aboutUsHeading.textContent = "Our Story!";
+
     const aboutUsParagraph = document.createElement("p");
     aboutUsParagraph.classList.add("aboutus-paragraph");
-
-    aboutUsHeading.textContent = "Our Story!";
     aboutUsParagraph.textContent = "Xplozion Café was founded 5 years ago by Mini Xplozion, a passionate barista with a flair for creating unique coffee blends. After traveling through various countries and learning the art of coffee-making from master roasters, Mini Xplozion returned to their hometown with a dream: to open a café where people from all walks of life could enjoy handcrafted brews.";
 
     aboutUsLeftContainer.appendChild(aboutUsHeading);
@@ -27,8 +27,6 @@ function onAboutUsClick() {
 
     const aboutUsImage = document.createElement("img");
     aboutUsImage.classList.add("aboutus-image");
-   
-
     aboutUsImage.src = coffeeShopImage3;
 
     aboutUsRightContainer.appendChild(aboutUsImage);

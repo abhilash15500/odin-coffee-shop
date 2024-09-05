@@ -1,4 +1,3 @@
-// alert("Its working!");
 
 import { onPageLoad } from "./onPageLoad";
 import { onHomeClick } from "./home";
@@ -19,17 +18,13 @@ homeBtn.addEventListener("click",()=>{
     menuBtn.style.textDecoration = "none";
     aboutUsbtn.style.textDecoration = "none";
     homeBtn.style.textDecoration = "underline";
-
 });
-
-
 
 menuBtn.addEventListener("click",()=>{
     onMenuClick();
     aboutUsbtn.style.textDecoration = "none";
     homeBtn.style.textDecoration = "none";
-    menuBtn.style.textDecoration = "underline";
-    
+    menuBtn.style.textDecoration = "underline"; 
 });
 
 aboutUsbtn.addEventListener("click",()=>{
@@ -37,12 +32,11 @@ aboutUsbtn.addEventListener("click",()=>{
     menuBtn.style.textDecoration = "none";
     homeBtn.style.textDecoration = "none";
     aboutUsbtn.style.textDecoration = "underline";
-})
-
+});
 
 logo.addEventListener("click",()=>{
     onPageLoad();
     menuBtn.style.textDecoration = "none";
     homeBtn.style.textDecoration = "none";
     aboutUsbtn.style.textDecoration = "none";
-})
+});
