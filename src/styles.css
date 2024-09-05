@@ -13,11 +13,11 @@
 
 body {
     background: linear-gradient(
-        135deg,
-        #1c0c08 0%,
-        #3e2b1f 50%,
-        #6f4f28 100%
-    );
+    135deg,
+    #120b06 0%,   /* Dark, near-black coffee brown */
+    #2d1d13 50%,  /* Deep, dark brown */
+    #5a3e27 100%  /* Dark brown with a hint of warmth */
+);
     color: white;
 }
 
