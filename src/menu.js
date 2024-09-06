@@ -119,7 +119,7 @@ function onMenuClick() {
 
 function appendCoffeeInfo() {
     const coffeesHeading = document.createElement("h2");
-    coffeesHeading.textContent = "Coffees ☕";
+    coffeesHeading.textContent = "Coffee ☕";
     const ul = document.createElement("ul");
 
     coffees.forEach(coffee => {
@@ -142,7 +142,7 @@ function appendCoffeeInfo() {
 
 function appendPizzaInfo() {
     const pizzasHeading = document.createElement("h2");
-    pizzasHeading.textContent = "Pizzas 🍕";
+    pizzasHeading.textContent = "Pizza 🍕";
     const ul = document.createElement("ul");
 
     pizzas.forEach(pizza => {
@@ -164,7 +164,7 @@ function appendPizzaInfo() {
 
 function appendSandwichInfo() {
     const sandwichesHeading = document.createElement("h2");
-    sandwichesHeading.textContent = "Sandwiches 🥪 ";
+    sandwichesHeading.textContent = "Sandwiche 🥪 ";
 
 
     const ul = document.createElement("ul");
@@ -187,7 +187,7 @@ function appendSandwichInfo() {
 
 function appendCocktailInfo() {
     const cocktailsHeading = document.createElement("h2");
-    cocktailsHeading.textContent = "Cocktails 🍹";
+    cocktailsHeading.textContent = "Cocktail 🍹";
 
     const ul = document.createElement("ul");
 
