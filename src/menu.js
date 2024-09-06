@@ -164,7 +164,7 @@ function appendPizzaInfo() {
 
 function appendSandwichInfo() {
     const sandwichesHeading = document.createElement("h2");
-    sandwichesHeading.textContent = "Sandwiche 🥪 ";
+    sandwichesHeading.textContent = "Sandwich 🥪 ";
 
 
     const ul = document.createElement("ul");
